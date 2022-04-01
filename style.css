@@ -21,7 +21,7 @@ body {
     max-width: 100%;
     /* background: linear-gradient(-45deg, #061161, #780206, #061161, #780206); */
     /* background-size: 500% 500%; */
-    background-image: url("https://trojanz07.github.io/background.png?size=10000");
+    background-image: url("https://trojanz07.github.io/background.jpg?size=10000");
     background-size: cover;
     animation: gradient 15s ease infinite;
 }
