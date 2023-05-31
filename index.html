@@ -1,58 +1,59 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./style.css"/>
-        <!-- <link rel="icon" href="./pfp" type="image/x-icon"> -->
-        <!-- fontawesome CDN -->
-        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.1.0/css/all.css"/>
-        <!-- included sweetalert2 js & css CDNs -->
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css">
-        <title>Trojan's Portfolio</title>
-    </head>
-    <body class="">
-        <div id="wrapper">
-            <section id="main">
-                <header>
-                    <!-- <span class="avatar"><img src="./pfp" alt="me" style="width: 100px;"></span> -->
-                    <h1>Trojan Zogaj</h1>
-                    <p>Student | Enthusiast | Photography &amp;Coding ❤️</p>
-                </header>
-                <footer>
-                    <div class="social-media">
-                        <div class="button">
-                            <div class="icon">
-                                <a href="https://www.instagram.com/trojanzogaj/" class="fab fa-instagram"></a>
-                            </div>
-                        </div>
-                        <div class="button">
-                            <div class="icon">
-                                <a href="https://www.facebook.com/trojani.zogaj/" class="fab fa-facebook-f"></a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            </section>
-        </div>
-        <footer id="footer">
-            <span>© Trojan Zogaj | 2021</span>
-        </footer>
-        <script>
-            var loadPage = ()=>{
-                Swal.fire({
-                    toast: true,
-                    icon: "success",
-                    title: "Welcome to Trojan's Website!",
-                    position: 'top-end',
-                    showConfirmButton: false,
-                    timer: 3000,
-                    timerProgressBar: true
-                })
-            }
-            loadPage()
-        </script>
-    </body>
+    <title>Trojan Zogaj</title>
+</head>
+<body>
+  <nav class="navbar">
+    <h1 class="navbar-brand">Trojan Zogaj</h1>
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="top">
+    <h1><b>Welcome to my portfolio</b></h1>
+    <p>
+      Here you will learn about my experience as a developer and a brief description of me.
+    </p>
+  </div>
+
+  <div class="buttons">
+    <container>
+      <span><a href="/">this.Home();</a></span>
+      <span><a href="/about">this.About();</a></span>
+      <span><a href="/contact">this.Contact();</a></span>
+    </container>
+  </div>
+
+
+  <footer>
+    <a href="/copyright/index.pdf">&copy; 2023 Trojan Zogaj. All rights reserved.</a>
+  </footer>
+  
+<script>
+  var loadPage = ()=>{
+    Swal.fire({
+      toast: true,
+      icon: "success",
+      title: "Welcome to Trojan Zogaj's Website!",
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true
+    })
+  }
+  loadPage()
+</script>
+
+</body>
 </html>
