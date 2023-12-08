@@ -2,58 +2,159 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css">
-    <title>Trojan's portfolio</title>
+    <title>Trojan Zogaj</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-  <nav class="navbar">
-    <h1 class="navbar-brand">Trojan Zogaj</h1>
-    <ul class="navbar-nav">
-      <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
-      <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
-    </ul>
-  </nav>
+    <div class="bgimg">
 
-  <div class="top">
-    <h1><b>Welcome to my portfolio</b></h1>
-    <p>
-      Here you will learn about my experience as a developer and a brief description of me.
-    </p>
-  </div>
+    
+        <div class="navbar">
+            <div class="navbar-name">
+                <h2>Trojan Zogaj</h2>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+              <i class="fas fa-bars"></i>
+            </a>
+            <div class="navbar-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+        <div class="mobile-links" id="navbarLinks">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+      </div>
 
-  <div class="buttons">
-    <container>
-      <span><a href="/">this.Home();</a></span>
-      <span><a href="/about">this.About();</a></span>
-      <span><a href="/contact">this.Contact();</a></span>
-    </container>
-  </div>
+        <div class="img">
+            <section>
+              <img src="./pfp.jpg" class="pfp">  
+            </section>
+        </div>
 
+        <div class="greeting" id="">
+            <h1>Hi 👋, My name is <span>Trojan</span>.</h1>
+            <p>
+                I'm a professional programmer and have done many projects during my 3+ year experience.
+            </p>
+        </div>
+    </div>
 
-  <footer>
-    <a href="/copyright/index.pdf">&copy; 2023 Trojan Zogaj. All rights reserved.</a>
-  </footer>
-  
-<script>
-  var loadPage = ()=>{
-    Swal.fire({
-      toast: true,
-      icon: "success",
-      title: "Welcome to Trojan Zogaj's Website!",
-      position: 'top-end',
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true
-    })
-  }
-  loadPage()
-</script>
+        <div class="about" id="about">
+            <div class="introduction">
+                <h2>About Me</h2>
+                <p>I'm passionate about programming and love to explore new technologies. Let's embark on a coding journey together!</p>
+            </div>
+            <div class="story">
+                <h2>The Story</h2>
+                <p>
+                    It initially began as a talent I acquired while gaining knowledge in IT. In 2020, my first objective was to pursue C#, but later, I shifted my focus to Full Stack Development with frameworks and PHP (now retired). In 2023, I enrolled in the Cisco Cyber Security Course and became certified in February. Subsequently, I participated in the Prizren Code Fest at Digital School, securing the 3rd place in Frameworks.
+                    <br><br>
 
+                    Now, I am pursuing even a Networking Course in Cisco and pursuing other stuff which I only know 😉.
+                </p>
+            </div>
+            <div class="skills">
+                <h2>My Skills & Languages</h2>
+                <div class="skill">
+                  <div class="skill-name">HTML</div>
+                  <div class="progress">
+                    <div id="html" class="progress-bar html"></div>
+                  </div>
+                </div>
+                <div class="skill">
+                  <div class="skill-name">CSS</div>
+                  <div class="progress">
+                    <div id="css" class="progress-bar css"></div>
+                  </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">JavaScript</div>
+                    <div class="progress">
+                      <div id="js" class="progress-bar js"></div>
+                    </div>
+                  </div>
+                  <div class="skill">
+                    <div class="skill-name">PHP</div>
+                    <div class="progress">
+                      <div id="php" class="progress-bar php"></div>
+                    </div>
+                  </div>
+                  <div class="skill">
+                    <div class="skill-name">C#</div>
+                    <div class="progress">
+                      <div id="csharp" class="progress-bar csharp"></div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+        <div class="projects" id="projects">
+            <div class="projects-entry">
+                <h2>My Projects</h2>
+                <p>These section includes all of my public projects I have made with all my love ❤️.</p>
+            </div>
+            <div class="projects-container">
+                <div class="project-card">
+                    <a href="trojanzogaj.me"> 
+                        <img src="project1.png" alt="Project 1 Image" class="project-image">
+                        <div class="project-info">
+                          <h3>My Personal Portfolio</h3>
+                          <p>trojanzogaj.me</p>
+                        </div>
+                      </a>
+                </div>
+                <div class="project-card">
+                    <a href=""> 
+                        <img src="project2_blurred.png" alt="Project 2 Image" class="project-image">
+                        <div class="project-info">
+                          <h3>Censored</h3>
+                          <p>Current address and name censored temporarily</p>
+                        </div>
+                      </a>
+                </div>
+                <div class="project-card">
+                  <a href=""> 
+                      <img src="project3_blurred.png" alt="Project 3 Image" class="project-image">
+                      <div class="project-info">
+                        <h3>Censored</h3>
+                        <p>Current address and name censored temporarily</p>
+                      </div>
+                    </a>
+              </div>
+              </div>
+        </div>
+
+        <div class="contact" id="contact">
+          <div class="contact-entry">
+              <h2>Contact Me</h2>
+              <p>These section includes all of my public contacts where you can reach out to me for anything.</p>
+          </div>
+          <div class="contact-container">
+            <a href="mailto:contact@trojanzogaj.me" target="_blank" rel="noopener noreferrer" class="contact-icon email-icon">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.facebook.com/trojani.zogaj" target="_blank" rel="noopener noreferrer" class="contact-icon facebook-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/trojanzogaj/" target="_blank" rel="noopener noreferrer" class="contact-icon instagram-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://github.com/trojanz07" target="_blank" rel="noopener noreferrer" class="contact-icon github-icon">
+                <i class="fab fa-github"></i>
+            </a>
+          </div>
+      </div>
+
+      <footer>
+        © TROJAN ZOGAJ 2023-<span id="currentYear"></span>. All rights reserved.
+      </footer>
+    
+    <script src="./script.js"></script>
 </body>
 </html>
