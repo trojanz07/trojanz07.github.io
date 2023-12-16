@@ -16,9 +16,9 @@ $(document).ready(function() {
       });
 
       navLinks.each(function() {
-        $(this).removeAttr('id', 'active');
+        $(this).removeClass('active');
         if ($(this).attr('href') === `#${activeSection}`) {
-          $(this).attr('id', 'active');
+          $(this).addClass('active');
         }
       });
     }
@@ -38,8 +38,3 @@ $(document).ready(function() {
 
     updateActiveSection();
   });
-
-  function toggleNavbar() {
-    var navbarLinks = document.getElementById("navbarLinks");
-    navbarLinks.classList.toggle("show");
-    }
