@@ -17,15 +17,15 @@ $(document).ready(function() {
       });
 
       navLinks.each(function() {
-        $(this).removeClass('active');
+        $(this).removeAttr('id', 'active');
         if ($(this).attr('href') === `#${activeSection}`) {
-          $(this).addClass('active');
+          $(this).attr('id', 'active');
         }
       });
        mobileLinks.each(function() {
-        $(this).removeClass('active');
+        $(this).removeAttr('id', 'active');
         if ($(this).attr('href') === `#${activeSection}`) {
-          $(this).addClass('active');
+          $(this).attr('id', 'active');
         }
       });
     }
@@ -44,17 +44,30 @@ $(document).ready(function() {
     });
 
     updateActiveSection();
+
+    $('a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+  
+        var target = this.hash;
+        var $target = $(target);
+  
+        $('html, body').stop().animate({
+          'scrollTop': $target.offset().top
+        }, 900, 'swing', function () {
+          window.location.hash = target;
+        });
+      });
   });
 
-    function setCurrentYear() {
-      var currentYear = new Date().getFullYear();
-      $('#currentYear').text(currentYear);
+  function setCurrentYear() {
+    var currentYear = new Date().getFullYear();
+    $('#currentYear').text(currentYear);
+  }
+
+  setCurrentYear();
+
+
+  function toggleNavbar() {
+    var navbarLinks = document.getElementById("navbarLinks");
+    navbarLinks.classList.toggle("show");
     }
-  
-    setCurrentYear();
-
-
-    function toggleNavbar() {
-      var navbarLinks = document.getElementById("navbarLinks");
-      navbarLinks.classList.toggle("show");
-      }
