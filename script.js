@@ -1,45 +1,42 @@
 $(document).ready(function() {
-    $(window).on('scroll', function() {
-      var scrollPos = $(window).scrollTop();
+    const sections = $('div[id]');
+    const navLinks = $('.navbar .navbar-links a');
 
-      $('div[id]').each(function() {
-        var offsetTop = $(this).offset().top;
-        var offsetBottom = offsetTop + $(this).outerHeight();
-        var targetId = $(this).attr('id');
+    function updateActiveSection() {
+      let maxVisibleArea = 0;
+      let activeSection = null;
 
-        if (scrollPos >= offsetTop && scrollPos <= offsetBottom) {
-          $('.navbar-links a').removeAttr('id', 'active');
-          $('.navbar-links a[href="#' + targetId + '"]').attr('id', 'active');
-          $('.mobile-links a').removeAttr('id', 'active');
-          $('.mobile-links a[href="#' + targetId + '"]').attr('id', 'active');
+      sections.each(function() {
+        const visibleArea = getVisibleArea($(this)[0]);
+
+        if (visibleArea > maxVisibleArea) {
+          maxVisibleArea = visibleArea;
+          activeSection = $(this).attr('id');
         }
       });
-    });
 
-    $('a[href^="#"]').on('click', function(e) {
-      e.preventDefault();
-
-      var target = this.hash;
-      var $target = $(target);
-
-      $('html, body').stop().animate({
-        'scrollTop': $target.offset().top
-      }, 900, 'swing', function () {
-        window.location.hash = target;
+      navLinks.each(function() {
+        $(this).removeAttr('id', 'active');
+        if ($(this).attr('href') === `#${activeSection}`) {
+          $(this).attr('id', 'active');
+        }
       });
-    });
-
-    $(document).on('scroll', function () {
-      let offset = window.pageYOffset;
-      document.body.style.backgroundPositionY = offset * 0.5 + 'px';
-    });
-
-    function setCurrentYear() {
-      var currentYear = new Date().getFullYear();
-      $('#currentYear').text(currentYear);
     }
-  
-    setCurrentYear();
+
+    function getVisibleArea(element) {
+      const rect = element.getBoundingClientRect();
+      const windowHeight = $(window).height();
+      const windowWidth = $(window).width();
+      const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
+      const visibleWidth = Math.min(rect.right, windowWidth) - Math.max(rect.left, 0);
+      return visibleHeight * visibleWidth;
+    }
+
+    $(window).on("scroll resize", function() {
+      updateActiveSection();
+    });
+
+    updateActiveSection();
   });
 
   function toggleNavbar() {
