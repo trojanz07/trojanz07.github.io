@@ -1,6 +1,7 @@
 $(document).ready(function() {
     const sections = $('div[id]');
     const navLinks = $('.navbar .navbar-links a');
+    const mobileLinks = $('.mobile-links a');
 
     function updateActiveSection() {
       let maxVisibleArea = 0;
@@ -16,6 +17,12 @@ $(document).ready(function() {
       });
 
       navLinks.each(function() {
+        $(this).removeClass('active');
+        if ($(this).attr('href') === `#${activeSection}`) {
+          $(this).addClass('active');
+        }
+      });
+       mobileLinks.each(function() {
         $(this).removeClass('active');
         if ($(this).attr('href') === `#${activeSection}`) {
           $(this).addClass('active');
