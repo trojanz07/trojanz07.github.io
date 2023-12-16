@@ -45,3 +45,16 @@ $(document).ready(function() {
 
     updateActiveSection();
   });
+
+    function setCurrentYear() {
+      var currentYear = new Date().getFullYear();
+      $('#currentYear').text(currentYear);
+    }
+  
+    setCurrentYear();
+
+
+    function toggleNavbar() {
+      var navbarLinks = document.getElementById("navbarLinks");
+      navbarLinks.classList.toggle("show");
+      }
