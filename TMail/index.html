@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>TMail</title>
+</head>
+<body>
+    <div class="flex w-full">
+        <div class="bg-grey-darkest h-screen">
+            <img src="http://zenobia.js.cool/img/zenobia2.png" alt="contact@trojanzogaj.me" class="rounded-full block w-32 p-4 mx-auto mb-4">
+            <div class="duh"><h1 class="text-center mb-6">contact@trojanzogaj.me</h1></div>
+            <div class="w-64 navigationMenu">
+                <div class="mb-5">
+                    <div class="flex text-black">
+                        <div class="w-12 ml-1 text-center"><i class="fas fa-inbox"></i></div>
+                        <div class="navItem"><a href="javascript:void(0)" class="relative no-underline text-grey-light hover:text-grey-lightest hover:border-4 border-brand">Inbox</a></div>
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <div class="flex text-black">
+                        <div class="w-12 ml-1 text-center"><i class="fas fa-pen"></i></div>
+                        <div class="navItem"><a href="javascript:void(0)" class="relative no-underline text-grey-light hover:text-grey-lightest hover:border-4 border-brand">Drafts</a></div>
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <div class="flex text-black">
+                        <div class="w-12 ml-1 text-center"><i class="fas fa-paper-plane"></i></div>
+                        <div class="navItem"><a href="javascript:void(0)" class="relative no-underline text-grey-light hover:text-grey-lightest hover:border-4 border-brand">Junk</a></div>
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <div class="flex text-black">
+                        <div class="w-12 ml-1 text-center"><i class="fas fa-fire-flame-curved"></i></div>
+                        <div class="navItem"><a href="javascript:void(0)" class="relative no-underline text-grey-light hover:text-grey-lightest hover:border-4 border-brand">Junk</a></div>
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <div class="flex text-black">
+                        <div class="w-12 ml-1 text-center"><i class="fas fa-trash"></i></div>
+                        <div class="navItem"><a href="javascript:void(0)" class="relative no-underline text-grey-light hover:text-grey-lightest hover:border-4 border-brand">Trash</a></div>
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <div class="flex text-black">
+                        <div class="w-12 ml-1 text-center"><i class="fas fa-folder"></i></div>
+                        <div class="navItem"><a href="javascript:void(0)" class="relative no-underline text-grey-light hover:text-grey-lightest hover:border-4 border-brand">Archive</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full bg-white">
+            <div class="flex justify-between border-b bg-grey-light">
+                <div class="ml-5 my-5">
+                    <a
+                        href="javascript:void(0)"
+                        class="text-2xl text-grey hover:text-grey-darkest focus:text-grey-darkest focus:outline-none toggleNavigationMenu"
+                        >
+                    <i class="fas fa-bars pr-10"></i>Inbox
+                    </a>
+                </div>
+                <div class="mr-5 my-5">
+                    <a
+                        href="javascript:void(0)"
+                        class="text-2xl text-grey hover:text-grey-darkest focus:text-grey-darkest focus:outline-none toggleNavigationMenu"
+                        >
+                    <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto relative">
+                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" class="py-4 px-20">
+                                Name
+                            </th>
+                            <th scope="col" class="py-4 px-20">
+                                From
+                            </th>
+                            <th scope="col" class="py-3 px-32">
+                                Date/Time
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                <th scope="row" class="py-4 px-20 font-medium text-grey-900 whitespace-nowrap text-black">
+                                    <i class="fas fa-envelope"></i>
+                                    <a href="">
+                                         RE: Test
+                                    </a>
+                                </th>
+                                <th scope="row" class="py-4 px-20 font-medium text-grey-900 whitespace-nowrap text-black">
+                                    example@domain.com
+                                </th>
+                                <td class="py-4 px-32 font-medium text-grey-900 whitespace-nowrap text-black">
+                                    10:30 PM : 21/01/2024
+                                </td>
+                        </tr>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            <th scope="row" class="py-4 px-20 font-medium text-grey-900 whitespace-nowrap text-black">
+                                <i class="fas fa-envelope"></i>
+                                <a href="">
+                                     Test 
+                                </a>
+                            </th>
+                            <th scope="row" class="py-4 px-20 font-medium text-grey-900 whitespace-nowrap text-black">
+                                example@domain.com
+                            </th>
+                            <td class="py-4 px-32 font-medium text-grey-900 whitespace-nowrap text-black">
+                                10:30 PM : 21/01/2024
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="py-4 px-32 font-medium text-grey-900 whitespace-nowrap text-black">
+                    *This site is a front-end prototype showcasing the design of an email portal. Please note it is not functional. Designed by Trojan Zogaj. Property of <a href="https://find-and-update.company-information.service.gov.uk/company/14638856" class="text-green-500">ZENOBIA DEVELOPMENT LTD</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('.toggleNavigationMenu').click(function (e) {
+    e.preventDefault();
+
+    var $navMenu = $('.navigationMenu');
+    var $duh = $('.duh');
+
+    if ($navMenu.hasClass('w-64')) {
+        $navMenu.removeClass('w-64').addClass('w-12');
+        $navMenu.find('.navItem').hide();
+        $duh.hide();
+    }
+    else {
+        $navMenu.removeClass('w-12').addClass('w-64');
+        $navMenu.find('.navItem').show();
+        $duh.show();
+    }
+
+    return false;
+});
+    </script>
+</body>
+</html>
